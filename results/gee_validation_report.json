@@ -1,0 +1,753 @@
+{
+  "schema": {
+    "working_columns": [
+      "Grid_ID",
+      "District",
+      "Year",
+      "Area_km2",
+      "BareLand",
+      "Builtup",
+      "Cropland",
+      "Grassland",
+      "TreeCover",
+      "Water",
+      "Wetland",
+      "Shrubland",
+      "NDVI_mean",
+      "Rainfall_mean",
+      "Temperature_mean",
+      "SoilMoisture_mean"
+    ],
+    "latest_columns": [
+      "Grid_ID",
+      "District",
+      "Year",
+      "Area_km2",
+      "BareLand",
+      "Builtup",
+      "Cropland",
+      "Grassland",
+      "TreeCover",
+      "Water",
+      "Wetland",
+      "Shrubland",
+      "NDVI_mean",
+      "Rainfall_mean",
+      "Temperature_mean",
+      "SoilMoisture_mean"
+    ],
+    "same_column_names": true,
+    "missing_in_latest": [],
+    "extra_in_latest": [],
+    "dtype_working": {
+      "Grid_ID": "str",
+      "District": "str",
+      "Year": "int64",
+      "Area_km2": "float64",
+      "BareLand": "float64",
+      "Builtup": "float64",
+      "Cropland": "float64",
+      "Grassland": "float64",
+      "TreeCover": "float64",
+      "Water": "float64",
+      "Wetland": "float64",
+      "Shrubland": "float64",
+      "NDVI_mean": "float64",
+      "Rainfall_mean": "float64",
+      "Temperature_mean": "float64",
+      "SoilMoisture_mean": "float64"
+    },
+    "dtype_latest": {
+      "Grid_ID": "str",
+      "District": "str",
+      "Year": "int64",
+      "Area_km2": "float64",
+      "BareLand": "float64",
+      "Builtup": "float64",
+      "Cropland": "float64",
+      "Grassland": "float64",
+      "TreeCover": "float64",
+      "Water": "float64",
+      "Wetland": "float64",
+      "Shrubland": "float64",
+      "NDVI_mean": "float64",
+      "Rainfall_mean": "float64",
+      "Temperature_mean": "float64",
+      "SoilMoisture_mean": "float64"
+    },
+    "dtype_mismatches": {}
+  },
+  "shape": {
+    "working_shape": [
+      22645,
+      16
+    ],
+    "latest_shape": [
+      22645,
+      16
+    ],
+    "same_shape": true,
+    "row_difference": 0,
+    "column_difference": 0
+  },
+  "missing": {
+    "working_missing": {
+      "Grid_ID": 0,
+      "District": 0,
+      "Year": 0,
+      "Area_km2": 0,
+      "BareLand": 0,
+      "Builtup": 0,
+      "Cropland": 0,
+      "Grassland": 0,
+      "TreeCover": 0,
+      "Water": 0,
+      "Wetland": 0,
+      "Shrubland": 0,
+      "NDVI_mean": 0,
+      "Rainfall_mean": 0,
+      "Temperature_mean": 0,
+      "SoilMoisture_mean": 0
+    },
+    "latest_missing": {
+      "Grid_ID": 0,
+      "District": 0,
+      "Year": 0,
+      "Area_km2": 0,
+      "BareLand": 0,
+      "Builtup": 0,
+      "Cropland": 0,
+      "Grassland": 0,
+      "TreeCover": 0,
+      "Water": 0,
+      "Wetland": 0,
+      "Shrubland": 0,
+      "NDVI_mean": 0,
+      "Rainfall_mean": 0,
+      "Temperature_mean": 0,
+      "SoilMoisture_mean": 0
+    },
+    "missing_match": true
+  },
+  "stats": {
+    "Year": {
+      "working": {
+        "mean": 2022.0,
+        "median": 2022.0,
+        "std": 1.4142447891428611,
+        "min": 2020.0,
+        "q1": 2021.0,
+        "q3": 2023.0,
+        "max": 2024.0
+      },
+      "latest": {
+        "mean": 2022.0,
+        "median": 2022.0,
+        "std": 1.4142447891428611,
+        "min": 2020.0,
+        "q1": 2021.0,
+        "q3": 2023.0,
+        "max": 2024.0
+      }
+    },
+    "Area_km2": {
+      "working": {
+        "mean": 19.79731678262723,
+        "median": 19.833875895913284,
+        "std": 0.45027523920883716,
+        "min": 18.78443325434438,
+        "q1": 19.42194177479865,
+        "q3": 20.19651177677263,
+        "max": 20.578966458871488
+      },
+      "latest": {
+        "mean": 19.79731678262723,
+        "median": 19.833875895913284,
+        "std": 0.45027523920883716,
+        "min": 18.78443325434438,
+        "q1": 19.42194177479865,
+        "q3": 20.19651177677263,
+        "max": 20.578966458871488
+      }
+    },
+    "BareLand": {
+      "working": {
+        "mean": 1.6360856033270714,
+        "median": 0.2920418472311045,
+        "std": 3.0848474447452716,
+        "min": 0.0,
+        "q1": 0.0816750646163488,
+        "q3": 1.980925831090272,
+        "max": 41.16164966210575
+      },
+      "latest": {
+        "mean": 1.6360856033270714,
+        "median": 0.2920418472311045,
+        "std": 3.0848474447452716,
+        "min": 0.0,
+        "q1": 0.0816750646163488,
+        "q3": 1.980925831090272,
+        "max": 41.16164966210575
+      }
+    },
+    "Builtup": {
+      "working": {
+        "mean": 3.7800121318518163,
+        "median": 2.975940877261101,
+        "std": 5.023967596740481,
+        "min": 0.0,
+        "q1": 1.8238116937745352,
+        "q3": 4.273572206016815,
+        "max": 88.42059997989246
+      },
+      "latest": {
+        "mean": 3.7800121318518163,
+        "median": 2.975940877261101,
+        "std": 5.023967596740481,
+        "min": 0.0,
+        "q1": 1.8238116937745352,
+        "q3": 4.273572206016815,
+        "max": 88.42059997989246
+      }
+    },
+    "Cropland": {
+      "working": {
+        "mean": 73.32809484800867,
+        "median": 78.59262090450612,
+        "std": 19.031036902525276,
+        "min": 0.0079404211689344,
+        "q1": 66.43794567587362,
+        "q3": 86.4235144259462,
+        "max": 99.02473274637929
+      },
+      "latest": {
+        "mean": 73.32809484800867,
+        "median": 78.59262090450612,
+        "std": 19.031036902525276,
+        "min": 0.0079404211689344,
+        "q1": 66.43794567587362,
+        "q3": 86.4235144259462,
+        "max": 99.02473274637929
+      }
+    },
+    "Grassland": {
+      "working": {
+        "mean": 5.263087535215495,
+        "median": 2.458569909334743,
+        "std": 8.238322062658709,
+        "min": 0.0,
+        "q1": 0.9637903792134808,
+        "q3": 5.88654385653573,
+        "max": 90.61301633852426
+      },
+      "latest": {
+        "mean": 5.263087535215495,
+        "median": 2.458569909334743,
+        "std": 8.238322062658709,
+        "min": 0.0,
+        "q1": 0.9637903792134808,
+        "q3": 5.88654385653573,
+        "max": 90.61301633852426
+      }
+    },
+    "TreeCover": {
+      "working": {
+        "mean": 13.579401718157591,
+        "median": 8.905164122546836,
+        "std": 15.276156790441448,
+        "min": 0.0,
+        "q1": 4.057799382755023,
+        "q3": 17.006819935465792,
+        "max": 99.80114114240652
+      },
+      "latest": {
+        "mean": 13.579401718157591,
+        "median": 8.905164122546836,
+        "std": 15.276156790441448,
+        "min": 0.0,
+        "q1": 4.057799382755023,
+        "q3": 17.006819935465792,
+        "max": 99.80114114240652
+      }
+    },
+    "Water": {
+      "working": {
+        "mean": 1.989678971972901,
+        "median": 0.026273280995281,
+        "std": 5.4750707808220085,
+        "min": 0.0,
+        "q1": 0.0004471801346801,
+        "q3": 0.3151239745739335,
+        "max": 60.22717575863107
+      },
+      "latest": {
+        "mean": 1.989678971972901,
+        "median": 0.026273280995281,
+        "std": 5.4750707808220085,
+        "min": 0.0,
+        "q1": 0.0004471801346801,
+        "q3": 0.3151239745739335,
+        "max": 60.22717575863107
+      }
+    },
+    "Wetland": {
+      "working": {
+        "mean": 0.08827001576377537,
+        "median": 0.0,
+        "std": 0.8150515274476443,
+        "min": 0.0,
+        "q1": 0.0,
+        "q3": 0.0040415603423714,
+        "max": 51.371394517307536
+      },
+      "latest": {
+        "mean": 0.08827001576377537,
+        "median": 0.0,
+        "std": 0.8150515274476443,
+        "min": 0.0,
+        "q1": 0.0,
+        "q3": 0.0040415603423714,
+        "max": 51.371394517307536
+      }
+    },
+    "Shrubland": {
+      "working": {
+        "mean": 0.3353691757026703,
+        "median": 0.0071991319964204,
+        "std": 1.9469473875966588,
+        "min": 0.0,
+        "q1": 0.0013624827706039,
+        "q3": 0.0401710762653972,
+        "max": 48.27956440948968
+      },
+      "latest": {
+        "mean": 0.3353691757026703,
+        "median": 0.0071991319964204,
+        "std": 1.9469473875966588,
+        "min": 0.0,
+        "q1": 0.0013624827706039,
+        "q3": 0.0401710762653972,
+        "max": 48.27956440948968
+      }
+    },
+    "NDVI_mean": {
+      "working": {
+        "mean": 0.45746420266192056,
+        "median": 0.4608687726824126,
+        "std": 0.08216866242077074,
+        "min": -0.0392965400190763,
+        "q1": 0.4190423010284483,
+        "q3": 0.5049018639255525,
+        "max": 0.8204204458045004
+      },
+      "latest": {
+        "mean": 0.45746420266192056,
+        "median": 0.4608687726824126,
+        "std": 0.08216866242077074,
+        "min": -0.0392965400190763,
+        "q1": 0.4190423010284483,
+        "q3": 0.5049018639255525,
+        "max": 0.8204204458045004
+      }
+    },
+    "Rainfall_mean": {
+      "working": {
+        "mean": 1100.155521365364,
+        "median": 1066.1392359783365,
+        "std": 281.4086365424457,
+        "min": 529.8354500616301,
+        "q1": 904.586046629482,
+        "q3": 1245.5083638693443,
+        "max": 2300.8196608522203
+      },
+      "latest": {
+        "mean": 1100.155521365364,
+        "median": 1066.1392359783365,
+        "std": 281.4086365424457,
+        "min": 529.8354500616301,
+        "q1": 904.586046629482,
+        "q3": 1245.5083638693443,
+        "max": 2300.8196608522203
+      }
+    },
+    "Temperature_mean": {
+      "working": {
+        "mean": 24.7760559643591,
+        "median": 24.88045214308861,
+        "std": 0.8045969713892502,
+        "min": 19.851811934553773,
+        "q1": 24.22651957903207,
+        "q3": 25.38204858565956,
+        "max": 26.25551546056573
+      },
+      "latest": {
+        "mean": 24.7760559643591,
+        "median": 24.88045214308861,
+        "std": 0.8045969713892502,
+        "min": 19.851811934553773,
+        "q1": 24.22651957903207,
+        "q3": 25.38204858565956,
+        "max": 26.25551546056573
+      }
+    },
+    "SoilMoisture_mean": {
+      "working": {
+        "mean": 0.23880934891372846,
+        "median": 0.2353754844461048,
+        "std": 0.014052557132253913,
+        "min": 0.1943531488025992,
+        "q1": 0.229883101650569,
+        "q3": 0.2470502722753237,
+        "max": 0.2970153848740332
+      },
+      "latest": {
+        "mean": 0.23880934891372846,
+        "median": 0.2353754844461048,
+        "std": 0.014052557132253913,
+        "min": 0.1943531488025992,
+        "q1": 0.229883101650569,
+        "q3": 0.2470502722753237,
+        "max": 0.2970153848740332
+      }
+    }
+  },
+  "feature_compare": {
+    "Year": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Area_km2": {
+      "pearson": 0.9999999999999999,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "BareLand": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Builtup": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Cropland": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Grassland": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "TreeCover": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Water": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Wetland": {
+      "pearson": 0.9999999999999999,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Shrubland": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "NDVI_mean": {
+      "pearson": 0.9999999999999998,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Rainfall_mean": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "Temperature_mean": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    },
+    "SoilMoisture_mean": {
+      "pearson": 1.0,
+      "mad": 0.0,
+      "rmse": 0.0,
+      "exact_equal": true,
+      "significant_deviation": false
+    }
+  },
+  "ranges": {
+    "Year": {
+      "working_min": 2020.0,
+      "working_max": 2024.0,
+      "latest_min": 2020.0,
+      "latest_max": 2024.0,
+      "same_range": true,
+      "combined_min": 2020.0,
+      "combined_max": 2024.0
+    },
+    "Area_km2": {
+      "working_min": 18.78443325434438,
+      "working_max": 20.578966458871488,
+      "latest_min": 18.78443325434438,
+      "latest_max": 20.578966458871488,
+      "same_range": true,
+      "combined_min": 18.78443325434438,
+      "combined_max": 20.578966458871488
+    },
+    "BareLand": {
+      "working_min": 0.0,
+      "working_max": 41.16164966210575,
+      "latest_min": 0.0,
+      "latest_max": 41.16164966210575,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 41.16164966210575
+    },
+    "Builtup": {
+      "working_min": 0.0,
+      "working_max": 88.42059997989246,
+      "latest_min": 0.0,
+      "latest_max": 88.42059997989246,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 88.42059997989246
+    },
+    "Cropland": {
+      "working_min": 0.0079404211689344,
+      "working_max": 99.02473274637929,
+      "latest_min": 0.0079404211689344,
+      "latest_max": 99.02473274637929,
+      "same_range": true,
+      "combined_min": 0.0079404211689344,
+      "combined_max": 99.02473274637929
+    },
+    "Grassland": {
+      "working_min": 0.0,
+      "working_max": 90.61301633852426,
+      "latest_min": 0.0,
+      "latest_max": 90.61301633852426,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 90.61301633852426
+    },
+    "TreeCover": {
+      "working_min": 0.0,
+      "working_max": 99.80114114240652,
+      "latest_min": 0.0,
+      "latest_max": 99.80114114240652,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 99.80114114240652
+    },
+    "Water": {
+      "working_min": 0.0,
+      "working_max": 60.22717575863107,
+      "latest_min": 0.0,
+      "latest_max": 60.22717575863107,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 60.22717575863107
+    },
+    "Wetland": {
+      "working_min": 0.0,
+      "working_max": 51.371394517307536,
+      "latest_min": 0.0,
+      "latest_max": 51.371394517307536,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 51.371394517307536
+    },
+    "Shrubland": {
+      "working_min": 0.0,
+      "working_max": 48.27956440948968,
+      "latest_min": 0.0,
+      "latest_max": 48.27956440948968,
+      "same_range": true,
+      "combined_min": 0.0,
+      "combined_max": 48.27956440948968
+    },
+    "NDVI_mean": {
+      "working_min": -0.0392965400190763,
+      "working_max": 0.8204204458045004,
+      "latest_min": -0.0392965400190763,
+      "latest_max": 0.8204204458045004,
+      "same_range": true,
+      "combined_min": -0.0392965400190763,
+      "combined_max": 0.8204204458045004
+    },
+    "Rainfall_mean": {
+      "working_min": 529.8354500616301,
+      "working_max": 2300.8196608522203,
+      "latest_min": 529.8354500616301,
+      "latest_max": 2300.8196608522203,
+      "same_range": true,
+      "combined_min": 529.8354500616301,
+      "combined_max": 2300.8196608522203
+    },
+    "Temperature_mean": {
+      "working_min": 19.851811934553773,
+      "working_max": 26.25551546056573,
+      "latest_min": 19.851811934553773,
+      "latest_max": 26.25551546056573,
+      "same_range": true,
+      "combined_min": 19.851811934553773,
+      "combined_max": 26.25551546056573
+    },
+    "SoilMoisture_mean": {
+      "working_min": 0.1943531488025992,
+      "working_max": 0.2970153848740332,
+      "latest_min": 0.1943531488025992,
+      "latest_max": 0.2970153848740332,
+      "same_range": true,
+      "combined_min": 0.1943531488025992,
+      "combined_max": 0.2970153848740332
+    }
+  },
+  "categorical": {
+    "District": {
+      "working_unique_count": 20,
+      "latest_unique_count": 20,
+      "missing_in_latest": [],
+      "extra_in_latest": [],
+      "exact_match": true
+    },
+    "Year": {
+      "working_unique_count": 5,
+      "latest_unique_count": 5,
+      "missing_in_latest": [],
+      "extra_in_latest": [],
+      "exact_match": true
+    },
+    "Grid_ID": {
+      "working_unique_count": 4529,
+      "latest_unique_count": 4529,
+      "missing_in_latest": [],
+      "extra_in_latest": [],
+      "exact_match": true
+    }
+  },
+  "model_summary": {
+    "working": {
+      "num_predictions": 22645,
+      "class_distribution": {
+        "High": 7697,
+        "Low": 7470,
+        "Moderate": 7478
+      },
+      "class_percentage": {
+        "High": 33.989843232501656,
+        "Low": 32.987414440273795,
+        "Moderate": 33.02274232722455
+      },
+      "mean_prediction_score": 0.9815805760366528,
+      "prediction_score_std": 0.06864707154467206,
+      "average_confidence": 0.9815805760366528,
+      "minimum_confidence": 0.5000632900388076,
+      "maximum_confidence": 1.0,
+      "probability_means": {
+        "High": 0.34008416395990226,
+        "Low": 0.3297113399963133,
+        "Moderate": 0.33020449604378443
+      },
+      "probability_stds": {
+        "High": 0.4658509441509245,
+        "Low": 0.46372822551456705,
+        "Moderate": 0.455852781590404
+      }
+    },
+    "latest": {
+      "num_predictions": 22645,
+      "class_distribution": {
+        "High": 7697,
+        "Low": 7470,
+        "Moderate": 7478
+      },
+      "class_percentage": {
+        "High": 33.989843232501656,
+        "Low": 32.987414440273795,
+        "Moderate": 33.02274232722455
+      },
+      "mean_prediction_score": 0.9815805760366528,
+      "prediction_score_std": 0.06864707154467206,
+      "average_confidence": 0.9815805760366528,
+      "minimum_confidence": 0.5000632900388076,
+      "maximum_confidence": 1.0,
+      "probability_means": {
+        "High": 0.34008416395990226,
+        "Low": 0.3297113399963133,
+        "Moderate": 0.33020449604378443
+      },
+      "probability_stds": {
+        "High": 0.4658509441509245,
+        "Low": 0.46372822551456705,
+        "Moderate": 0.455852781590404
+      }
+    }
+  },
+  "agreement": {
+    "agreement_percentage": 100.0,
+    "differing_predictions": 0,
+    "num_predictions_working": 22645,
+    "num_predictions_latest": 22645,
+    "confusion_matrix": {
+      "High": {
+        "High": 7697,
+        "Low": 0,
+        "Moderate": 0
+      },
+      "Low": {
+        "High": 0,
+        "Low": 7470,
+        "Moderate": 0
+      },
+      "Moderate": {
+        "High": 0,
+        "Low": 0,
+        "Moderate": 7478
+      }
+    },
+    "differing_indices_preview": []
+  },
+  "root_cause": {
+    "differing_predictions": 0,
+    "agreement_percentage": 100.0,
+    "same_model_input_after_preprocessing": true,
+    "dataset_exact_match": true
+  }
+}

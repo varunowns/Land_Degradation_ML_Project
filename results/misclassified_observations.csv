@@ -1,0 +1,17 @@
+District,Year,Grid_ID,y_true,y_pred,correct
+Chitrakoot,2022,GRID_001923,Moderate,High,False
+Balrampur,2024,GRID_001570,Low,Moderate,False
+Chandauli,2022,GRID_001752,Moderate,High,False
+Allahabad,2021,GRID_001065,Low,Moderate,False
+Agra,2024,GRID_002918,Moderate,High,False
+Bijnor,2024,GRID_004087,Moderate,Low,False
+Chitrakoot,2024,GRID_001895,High,Moderate,False
+Chandauli,2023,GRID_001689,Moderate,High,False
+Badaun,2021,GRID_004341,Moderate,Low,False
+Aligarh,2021,GRID_000809,Low,Moderate,False
+Basti,2022,GRID_002114,Moderate,Low,False
+Ambedkar Nagar,2022,GRID_000584,Moderate,Low,False
+Chandauli,2023,GRID_001722,High,Moderate,False
+Balrampur,2024,GRID_001578,Low,Moderate,False
+Badaun,2021,GRID_004402,Low,Moderate,False
+Chitrakoot,2021,GRID_002053,Moderate,High,False

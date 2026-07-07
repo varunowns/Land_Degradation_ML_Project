@@ -1,0 +1,37 @@
+ERROR ANALYSIS DISCUSSION
+=========================
+
+Hardest class to predict: Moderate
+- The 'Moderate' class shows the highest error rate (0.6%).
+- Moderate degradation is often ecologically transitional: NDVI, soil moisture, and
+  bare-land fractions overlap with both Low and High classes, producing ambiguous
+  feature signatures at 5 km resolution.
+
+District with lowest accuracy: Chandauli
+- District-level heterogeneity in land use (intensive cropland vs. fragmented tree cover)
+  and local irrigation infrastructure may not be fully captured by coarse GEE aggregates.
+- Transboundary climate gradients across eastern and western UP districts can shift
+  rainfall/temperature baselines, increasing confusion for models relying on district dummies.
+
+Temporal patterns:
+- Best year: 2020 | Worst year: 2024
+- Inter-annual rainfall variability (monsoon deficit vs. surplus years) directly affects
+  NDVI and soil moisture, which are primary LDI inputs. Extreme years may push grid cells
+  across class boundaries defined by study-wide quantile thresholds.
+
+Most common misclassification patterns:
+y_true    y_pred  
+Low       Moderate    5
+Moderate  High        5
+          Low         4
+High      Moderate    2
+
+Environmental interpretation:
+- Low → Moderate errors often occur in cropland-dominated grids experiencing seasonal
+  vegetation stress without sustained bare-soil expansion.
+- Moderate → High errors align with grids showing elevated bare-land fraction and
+  temperature anomalies during drought-influenced years.
+- High → Moderate errors may reflect short-term recovery signals (NDVI rebound after
+  monsoon) that the model interprets as resilience.
+
+Total misclassified observations: 16 / 4529
