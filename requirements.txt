@@ -1,0 +1,30 @@
+# Land Degradation ML Project — Core Dependencies
+# Main pipeline and Streamlit app requirements
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+joblib>=1.3.0
+
+# Visualization & Analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.18.0
+shap>=0.44.0
+
+# Streamlit Application
+streamlit>=1.32.0
+
+# Geographic & Earth Engine
+geopandas>=0.14.0
+geemap>=0.30.0
+earthengine-api>=0.1.380
+google-cloud>=0.34.0
+
+# Export & utilities
+kaleido>=0.2.1
+python-dotenv>=1.0.0
