@@ -1,0 +1,75 @@
+=== 1. Dataset Overview ===
+Shape: (22645, 16)
+Data Types:
+Grid_ID                  str
+District                 str
+Year                   int64
+Area_km2             float64
+BareLand             float64
+Builtup              float64
+Cropland             float64
+Grassland            float64
+TreeCover            float64
+Water                float64
+Wetland              float64
+Shrubland            float64
+NDVI_mean            float64
+Rainfall_mean        float64
+Temperature_mean     float64
+SoilMoisture_mean    float64
+dtype: object
+Summary Stats:
+                     count         mean  ...          75%          max
+NDVI_mean          22645.0     0.457464  ...     0.504902     0.820420
+Rainfall_mean      22645.0  1100.155521  ...  1245.508364  2300.819661
+Temperature_mean   22645.0    24.776056  ...    25.382049    26.255515
+SoilMoisture_mean  22645.0     0.238809  ...     0.247050     0.297015
+BareLand           22645.0     1.636086  ...     1.980926    41.161650
+Builtup            22645.0     3.780012  ...     4.273572    88.420600
+Cropland           22645.0    73.328095  ...    86.423514    99.024733
+Grassland          22645.0     5.263088  ...     5.886544    90.613016
+TreeCover          22645.0    13.579402  ...    17.006820    99.801141
+Water              22645.0     1.989679  ...     0.315124    60.227176
+Wetland            22645.0     0.088270  ...     0.004042    51.371395
+Shrubland          22645.0     0.335369  ...     0.040171    48.279564
+Area_km2           22645.0    19.797317  ...    20.196512    20.578966
+
+[13 rows x 8 columns]
+
+=== 2. Univariate Analysis (Distributions) ===
+NDVI_mean - Mean: 0.457, Median: 0.461, Skewness: -0.568, Kurtosis: 3.558
+Rainfall_mean - Mean: 1100.156, Median: 1066.139, Skewness: 0.756, Kurtosis: 0.476
+Temperature_mean - Mean: 24.776, Median: 24.880, Skewness: -0.576, Kurtosis: 0.221
+SoilMoisture_mean - Mean: 0.239, Median: 0.235, Skewness: 0.607, Kurtosis: 0.097
+BareLand - Mean: 1.636, Median: 0.292, Skewness: 3.988, Kurtosis: 24.722
+Builtup - Mean: 3.780, Median: 2.976, Skewness: 7.833, Kurtosis: 87.239
+Cropland - Mean: 73.328, Median: 78.593, Skewness: -1.705, Kurtosis: 3.099
+Grassland - Mean: 5.263, Median: 2.459, Skewness: 3.703, Kurtosis: 17.910
+TreeCover - Mean: 13.579, Median: 8.905, Skewness: 2.801, Kurtosis: 10.021
+Water - Mean: 1.990, Median: 0.026, Skewness: 3.786, Kurtosis: 16.886
+Wetland - Mean: 0.088, Median: 0.000, Skewness: 35.649, Kurtosis: 1880.976
+Shrubland - Mean: 0.335, Median: 0.007, Skewness: 10.431, Kurtosis: 133.839
+Area_km2 - Mean: 19.797, Median: 19.834, Skewness: -0.191, Kurtosis: -0.964
+
+=== 3. Correlation Analysis ===
+Highly Correlated Pairs (|r| > 0.7, Pearson):
+  TreeCover & Cropland: -0.742
+  Area_km2 & Temperature_mean: 0.829
+
+=== 4. Temporal Analysis ===
+
+=== 5. Spatial Analysis (District Extremes) ===
+Highest NDVI: Bijnor (0.541)
+Lowest NDVI: Ballia (0.397)
+Highest Rainfall: Balrampur (1584.608)
+Lowest Rainfall: Agra (805.589)
+Highest Temp: Banda (25.661)
+Highest BareLand: Auraiya (3.248)
+
+=== 6. Outlier Analysis (IQR Method) ===
+NDVI_mean: 1139 outliers (5.0%)
+Rainfall_mean: 536 outliers (2.4%)
+Temperature_mean: 160 outliers (0.7%)
+SoilMoisture_mean: 434 outliers (1.9%)
+BareLand: 2283 outliers (10.1%)
+TreeCover: 1485 outliers (6.6%)

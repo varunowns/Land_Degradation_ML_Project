@@ -1,0 +1,24 @@
+INTERPRETABILITY FIGURE GUIDE
+=============================
+
+1. permutation_importance.png
+   Shows how much the model's F1-macro score drops when each feature is
+   randomly permuted. Larger drops indicate stronger predictive influence.
+   This method is model-agnostic and accounts for feature interactions.
+
+2. shap_summary.png
+   SHAP (SHapley Additive exPlanations) values decompose each prediction into
+   per-feature contributions. Red points indicate high feature values pushing
+   predictions toward a class; blue points indicate low values. Features are
+   ranked by mean absolute SHAP impact across the sample.
+
+3. partial_dependence.png
+   Displays the marginal relationship between selected environmental variables
+   (NDVI, rainfall, temperature, soil moisture, LULC fractions) and the
+   model's predicted response. Upward trends for BareLand/Temperature suggest
+   increased degradation likelihood; downward trends for NDVI/TreeCover
+   indicate vegetation resilience suppressing degradation classification.
+
+4. feature_importance_*.png (from Stage 3)
+   Native Gini-based importance for tree models; reflects how often and how
+   effectively each feature splits nodes during ensemble construction.

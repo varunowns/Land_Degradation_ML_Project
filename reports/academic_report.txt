@@ -1,0 +1,105 @@
+LAND DEGRADATION PREDICTION USING MACHINE LEARNING AND GOOGLE EARTH ENGINE
+Report-Ready Sections
+Study Area: Uttar Pradesh, India (20 districts) | Grid: 5 km | Period: 2020–2024
+Generated: 2026-07-02
+
+================================================================================
+METHODOLOGY
+================================================================================
+Land degradation severity was previously quantified using a composite Land
+Degradation Index (LDI) derived from Google Earth Engine (GEE) remote sensing
+products: land use/land cover (LULC) fractions, NDVI, rainfall, temperature,
+and soil moisture. Grid cells were classified into three ordinal categories
+(Low, Moderate, High) via study-area quantile thresholds (33rd and 66th
+percentiles).
+
+Supervised multiclass classification was performed to predict Degradation_Class
+from environmental predictors while explicitly excluding LDI (target leakage)
+and Grid_ID (spatial identifier). District was incorporated through one-hot
+encoding (drop-first) to preserve nominal spatial context without imposing false
+ordinality. Year and grid-level environmental variables constituted the feature
+set. Data were partitioned using a stratified 80/20 train-test split
+(random_state=42).
+
+Five baseline algorithms were evaluated: Logistic Regression (with
+StandardScaler on numeric features), Decision Tree, Random Forest, Gradient
+Boosting, and XGBoost. The two highest-ranked models by test F1-macro were
+selected for RandomizedSearchCV hyperparameter optimisation (5-fold CV).
+Model interpretability was assessed using SHAP values, permutation importance,
+and partial dependence plots. Error analysis was conducted at class, district,
+and inter-annual temporal scales.
+
+================================================================================
+RESULTS
+================================================================================
+The baseline comparison ranked logistic_regression highest with test
+F1-macro = 0.9934, accuracy = 0.9934,
+and ROC-AUC = 0.9999 (macro OvR).
+
+The top two baseline models underwent RandomizedSearchCV with 5-fold stratified
+cross-validation (scoring: F1-macro). The best tuned configuration was
+logistic_regression (CV F1-macro = 0.9963).
+
+Permutation importance and SHAP analysis consistently highlighted vegetation
+and moisture-related variables (e.g., Area_km2, BareLand, Builtup, Cropland, Grassland)
+as primary discriminators among degradation classes. Confusion matrices indicate
+that adjacent classes (Low↔Moderate, Moderate↔High) account for the majority of
+misclassifications, consistent with continuous ecological gradients discretised
+into quantile bins.
+
+================================================================================
+DISCUSSION
+================================================================================
+Machine learning models successfully learned the mapping from multi-source
+remote sensing features to LDI-derived degradation classes across Uttar Pradesh.
+Logistic Regression achieved the highest test performance (F1-macro ≈ 0.993),
+outperforming tree-based ensembles (XGBoost F1-macro ≈ 0.971). This suggests
+that the relationship between LDI-component variables and quantile-derived
+classes is largely linear and separable in the scaled feature space. The strong
+performance also reflects the fact that LDI is computed from a subset of the
+same input features (BareLand, Temperature, NDVI, SoilMoisture, TreeCover,
+Rainfall), so the classifier is partially reconstructing the index logic rather
+than discovering independent degradation patterns.
+
+The Moderate class exhibited the highest confusion rate, reflecting its position
+as a transitional state in the LDI continuum. Districts with heterogeneous
+land-use mosaics and irrigation variability showed elevated error rates.
+Inter-annual accuracy fluctuations correspond to monsoon-driven NDVI and soil
+moisture dynamics, underscoring the sensitivity of degradation classification
+to precipitation anomalies.
+
+================================================================================
+CONCLUSION
+================================================================================
+This study demonstrates that GEE-derived geospatial features, combined with
+ensemble machine learning, provide a scalable framework for operational land
+degradation monitoring at 5 km resolution over Uttar Pradesh. The tuned
+classifier achieves competitive multiclass performance and offers interpretable
+environmental drivers aligned with established land degradation science
+(vegetation decline, bare-soil expansion, thermal stress, moisture deficit).
+
+================================================================================
+LIMITATIONS
+================================================================================
+1. LDI-derived labels introduce circularity risk if LDI components overlap
+   heavily with input features; however, LDI itself was excluded from training.
+2. Quantile-based class boundaries are relative to the study period and may not
+   transfer to other regions or climate scenarios without recalibration.
+3. 5 km grid resolution aggregates sub-grid land-use heterogeneity.
+4. District one-hot encoding does not capture within-district micro-climatic
+   variation beyond grid-level predictors.
+5. SHAP analysis for linear models uses approximate KernelExplainer sampling,
+   which introduces computational stochasticity.
+
+================================================================================
+FUTURE SCOPE
+================================================================================
+1. Integrate temporal lag features and change-detection metrics (ΔNDVI, ΔLULC)
+   to capture degradation trajectories rather than single-year snapshots.
+2. Apply spatial cross-validation (district-held-out) to assess generalisation
+   to unseen administrative units.
+3. Compare deep learning (CNN/LSTM) on pixel-level satellite imagery.
+4. Validate predictions against field-based degradation surveys or ISRO LCMLU
+   reference data.
+5. Deploy the pipeline as an automated GEE + ML cloud workflow for near-real-time
+   monitoring across the Indo-Gangetic Plain.

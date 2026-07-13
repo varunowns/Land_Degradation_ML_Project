@@ -62,16 +62,15 @@ env/
 .DS_Store
 
 # Project-specific
-models/*.pkl
-models/*.joblib
+models/                         # Trained model artifacts (too large, regenerate via pipeline)
 plots/**/*.png
 plots/**/*.jpg
 logs/*.log
 config/settings.json
-results/latest_predictions.csv
+results/                        # Model predictions & metrics (regenerate via pipeline)
 
 # Data files (pre-built, do not commit)
-data/*.csv
+data/                           # Pre-built datasets from GEE extraction
 *.csv
 
 # Backup and temporary files
