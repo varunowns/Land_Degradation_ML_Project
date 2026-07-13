@@ -3,6 +3,9 @@
 **B.Tech Major Project** | Study Area: Uttar Pradesh, India (20 districts)  
 **Spatial Resolution:** 5 km × 5 km | **Temporal Coverage:** 2020–2024
 
+**Author:** Varun  
+**Description:** Add legacy phase scripts and reports
+
 ---
 
 ## Project Status
